@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGMA 2K24</title>
+  <link rel="icon" href="./images/csd_logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Zilla+Slab:wght@400;700&display=swap');
+
+    /* PRELOADER CSS */
+    .page-loader::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      backdrop-filter: blur(2px);
+    }
+
+    .page-loader {
+      opacity: 1;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      background: url('https://i.gifer.com/AIq4.gif');
+      background-position: center;
+      background-size: cover;
+      z-index: 1000;
+      transition: opacity 1s, transform 1s;
+
+      .txt {
+        color: #333;
+        text-align: center;
+        top: 10%;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        font-weight: bold;
+        line-height: 1.5;
+        font-size: 6rem;
+        text-shadow: 4px 4px 2px #8d8d8d;
+        font-family: "Bree Serif", serif;
+        font-weight: 400;
+        font-style: normal;
+        opacity: 0;
+        /* Initially hide the text */
+        animation: fade-in 1s ease-in forwards;
+      }
+
+    }
+
+    .page-loader p {
+      font-size: 1.75rem;
+      font-family: "Zilla Slab", serif;
+      font-weight: 600;
+      letter-spacing: 3px;
+      opacity: 0;
+      animation: fade-in 1s ease-in forwards;
+      text-align: center;
+      position: relative;
+      top: 2%;
+      color: #fff;
+      text-shadow: 2px 2px 0px #333,
+        /* White shadow */
+        -2px -2px 0px #333,
+        /* White shadow */
+        2px -2px 0px #333,
+        /* White shadow */
+        -2px 2px 0px #333;
+      width: auto;
+      padding: 0 1rem;
+
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .slide-up {
+      transform: translateY(-100%);
+    }
+
+    /* SPINNER ANIMATION */
+    .spinner {
+      position: relative;
+      top: 35%;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      background-color: #ffa230;
+      border-radius: 100%;
+      -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+      animation: sk-scaleout 1.0s infinite ease-in-out;
+    }
+
+    @-webkit-keyframes sk-scaleout {
+      0% {
+        -webkit-transform: scale(0)
+      }
+
+      100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+      }
+    }
+
+    @keyframes sk-scaleout {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+
+      100% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+        opacity: 0;
+      }
+    }
+
+    .cover {
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .cover.fade-in {
+      opacity: 1;
+    }
+
+
+    @media only screen and (max-width: 600px) {
+      .page-loader p {
+        font-size: 16px;
+        font-weight: 500;
+        position: relative;
+        top: 10%;
+        text-shadow: none;
+        background-color: #333;
+        padding: 0.5rem 1rem;
+      }
+
+      .page-loader {
+
+        .txt {
+          font-size: 3rem;
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- <div class="page-loader" id="loading">
+    <div class="spinner"></div>
+    <div class="txt">SIGMA 2K24</div>
+    <p>The Technical Retro Fest of CSD</p>
+  </div> -->
+
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+
+  <div class="cover">
+    <?php include 'navbar.php' ?>
+
+    <section class="home">
+      <div class="bg-img"></div>
+      <img src="images/banner.svg" class="top-img">
+      <img src="images/mobile.svg" class="mobile-top-img">
+    </section>
+
+
+    <section id="about">
+      <div class="container">
+        <div class="register-strip" >
+          <p>
+            Step into a Time Machine and Experience the Ultimate College Technical Fest in a Retro Style!
+          </p>
+          <a class="register-btn" target="new" href="https://docs.google.com/forms/d/e/1FAIpQLSfkV7dSb4bT7CnlOt0YHIaj_1APv-jE5yeqyxcOrbk57SYphQ/viewform?usp=sf_link">Register Now! <i
+              class="uil uil-navigator"></i></a>
+        </div>
+
+        <div class="about-strip">
+          <div class="about">
+            <div class="badge c-black" id="badge" >
+              <span class="badge__char"> c </span>
+              <span class="badge__char"> o </span>
+              <span class="badge__char"> m </span>
+              <span class="badge__char"> p </span>
+              <span class="badge__char"> u </span>
+              <span class="badge__char"> t </span>
+              <span class="badge__char"> e </span>
+              <span class="badge__char"> r </span>
+              <span class="badge__char"> </span>
+              <span class="badge__char"> S </span>
+              <span class="badge__char"> c </span>
+              <span class="badge__char"> i </span>
+              <span class="badge__char"> e </span>
+              <span class="badge__char"> n </span>
+              <span class="badge__char"> c </span>
+              <span class="badge__char"> e </span>
+              <span class="badge__char"> </span>
+              <span class="badge__char"> & </span>
+              <span class="badge__char"> </span>
+              <span class="badge__char"> D </span>
+              <span class="badge__char"> e </span>
+              <span class="badge__char"> s </span>
+              <span class="badge__char"> i </span>
+              <span class="badge__char"> g </span>
+              <span class="badge__char"> n </span>
+              <span class="badge__char"> </span>
+              <span class="badge__char"> ★ </span>
+              <span class="badge__char"> </span>
+              <span class="badge__char"> S </span>
+              <span class="badge__char"> i </span>
+              <span class="badge__char"> g </span>
+              <span class="badge__char"> m </span>
+              <span class="badge__char"> a </span>
+              <span class="badge__char"> 2 </span>
+              <span class="badge__char"> k </span>
+              <span class="badge__char"> 2 </span>
+              <span class="badge__char"> 4 </span>
+              <span class="badge__char"> </span>
+              <span class="badge__char"> ★ </span>
+              <span class="badge__char"> </span>
+
+              <img class="badge__emoji" src="images/csd_logo.png" alt="">
+            </div>
+          </div>
+          <img class="mobile-logo" src="images/csd_logo.png" alt="">
+
+          <div class="right">
+            <h2 class="heading" style="text-align: left;color:var(--heading);">SIGMA 2k24 - <span
+                style="color:var(--sub-heading);">The Tech Fest of CSD</span></h2>
+            <p style="font-size:18px;"><br>Welcome to SIGMA 2k24, the pinnacle of innovation and technology at CSD! Join us for an electrifying
+              experience where cutting-edge ideas collide with creativity. Immerse yourself in a dynamic atmosphere of
+              workshops, competitions, and tech talks, showcasing the prowess of our department's brightest minds.
+              Discover the future of technology as SIGMA 2k24 unfolds, promising an unforgettable journey through the
+              realms of innovation. Don't miss this opportunity to witness the convergence of knowledge and excitement
+              at the heart of our department's Tech Fest!</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="dummy">
+      <h2 class="heading2"style="color:var(--heading);text-shadow:4px 4px #838383;letter-spacing:-2px;">Events</h2>
+        <div class="container">
+          <p class="side-heading" style="text-align:center">Technical Events</p>
+          <div id="card-list">
+            <div id="card" >
+              <div id="card-img">
+                <img src="https://www.shutterstock.com/image-vector/cinema-poster-mafia-movies-film-600nw-2223988615.jpg">
+              </div>
+              <div id="card-content">
+                <p id="event-name">Criminal Hunt | <span id="cost">Rs.60</span></p>
+                <div id="buttons">
+                  <a  onclick = "changeContent('card1')" id="details">More Details</a>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdBIWy5DR3KuxCiJsEcbuH7molZ7qfasMDWKrqILsEr5T3Buw/viewform" target="new" id="register">Register</a>
+                </div>
+              </div>
+            </div>
+            <div id="card">
+              <div id="card-img">
+                <img src="./images/t_hunt.jpg">
+              </div>
+              <div id="card-content">
+                <p id="event-name">Treasure Hunt | <span id="cost">Rs.50</span></p>
+                <div id="buttons">
+                  <a  onclick = "changeContent('card2')" id="details">More Details</a>
+                  <a href=" https://forms.gle/Kd3chcQL75srnC4EA" target="new" id="register">Register</a>
+                </div>
+              </div>
+            </div>
+            <div id="card">
+              <div id="card-img">
+                <img src="https://m.media-amazon.com/images/M/MV5BZDE3YTNhNzctZjdiNy00YjZjLWE4MDMtOGJjODE2YjE3NDllXkEyXkFqcGdeQXVyODAzNzAwOTU@._V1_.jpg">
+              </div>
+              <div id="card-content">
+                <p id="event-name">KBC Quiz | <span id="cost">Rs.50</span></p>
+                <div id="buttons">
+                  <a  onclick = "changeContent('card3')" id="details">More Details</a>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdl4PVe7LjeW-r10MUcKA-a_Y1PR4Q0I4CckIKtDmja1_K4bQ/viewform?usp=sf_link" target="new" id="register">Register</a>
+                </div>
+              </div>
+            </div>
+            <div id="card">
+              <div id="card-img">
+                <img src="./images/code_master.jpg">
+              </div>
+              <div id="card-content">
+                <p id="event-name">Code Master | <span id="cost">Rs.30</span></p>
+                <div id="buttons">
+                  <a  onclick = "changeContent('card4')" id="details">More Details</a>
+                  <a href="https://forms.gle/ZSW8Ftuy3wqcz12V7" target="new" id="register">Register</a>
+                </div>
+              </div>
+            </div>
+            <div id="card">
+              <div id="card-img">
+                <img src="./images/spell_bee.png">
+              </div>
+              <div id="card-content">
+                <p id="event-name">Spell Bee | <span id="cost">Rs.20</span></p>
+                <div id="buttons">
+                  <a  onclick = "changeContent('card5')" id="details">More Details</a>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_FYowb_w9S9qJBTGnopqFsJIb8T1oTaZnxk8EuzAaiS0rvA/viewform?usp=sf_link" target="new" id="register">Register</a>
+                </div>
+              </div>
+            </div>
+            <div id="card">
+              <div id="card-img">
+                <img src="./images/housie.png">
+              </div>
+              <div id="card-content">
+                <p id="event-name">Online Housie | <span id="cost">Rs.10</span></p>
+                <div id="buttons">
+                  <a  onclick = "changeContent('card6')" id="details">More Details</a>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFMfE00mwZ4hpvvPHbGgm8KKiV27e42fmTiKySicpiKrqSOQ/viewform?usp=sf_link" target="new" id="register">Register</a>
+                </div>
+              </div>
+            </div>
+            <div id="card">
+              <div id="card-img">
+                <img src="./images/ideathon.png">
+              </div>
+              <div id="card-content">
+                <p id="event-name">Ideathon | <span id="cost">Free</span></p>
+                <div id="buttons">
+                  <a  onclick = "changeContent('card7')" id="details">More Details</a>
+                  <a href="https://docs.google.com/forms/d/1WQdLpBWAUoUIJbniY4rGo5H6giNJ2NYrDvdVXxZ3rtM/edit" target="new" id="register">Register</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tech-event-info">
+            <div class="info-card" id="card1-content" style="display:none;">
+              <i class="uil uil-multiply close-btn" onclick="hideCardContent()"></i>
+              <div class="info">
+                <div class="info-img">
+                  <img src="https://www.shutterstock.com/image-vector/cinema-poster-mafia-movies-film-600nw-2223988615.jpg">
+                </div>
+                <div class="info-details">
+                  <p><span class="event-title">CRIMINAL HUNT</span><br>Are you ready to put your detective skills to the test and unravel the mystery of a heinous crime? Welcome to Criminal Hunt, the immersive and thrilling game where players step into the shoes of seasoned investigators to solve a chilling criminal case.</p>
+                  
+                  <p class="time">
+                    <i class="uil uil-clock"></i>Timings :  11:00AM - 12:30PM
+                  </p>
+                  <p class="venue">
+                    <i class="uil uil-map"></i>Venue : Idea Lab Area
+                  </p>
+                  <a class="register2" href="https://docs.google.com/forms/d/e/1FAIpQLSdBIWy5DR3KuxCiJsEcbuH7molZ7qfasMDWKrqILsEr5T3Buw/viewform" target="new">Register</a>
+                </div>  
+              </div>
+            </div>
+
+            <div class="info-card" id="card2-content" style="display:none;">
+              <i class="uil uil-multiply close-btn" onclick="hideCardContent()"></i>
+              <div class="info">
+                <div class="info-img">
+                  <img src="./images/t_hunt.jpg">
+                </div>
+                <div class="info-details">
+                  <p><span class="event-title">TREASURE HUNT</span><br>Embark on a thrilling treasure hunt adventure, 🗺 solving clues and navigating challenges to uncover hidden treasures in an immersive and suspenseful journey. Test your wits and teamwork as you explore mysterious locations and unravel the secrets of the ultimate quest for fortune.</p>
+                  
+                  <p class="time">
+                    <i class="uil uil-clock"></i>Timings : 2:30PM - 3:30PM
+                  </p>
+                  <p class="venue">
+                    <i class="uil uil-map"></i>Venue : Idea Lab Area
+                  </p>
+                  <a class="register2" href=" https://forms.gle/Kd3chcQL75srnC4EA" target="new">Register</a>
+                </div>  
+              </div>
+            </div>
+
+            <div class="info-card" id="card3-content" style="display:none;">
+              <i class="uil uil-multiply close-btn" onclick="hideCardContent()"></i>
+              <div class="info">
+                <div class="info-img">
+                  <img src="https://m.media-amazon.com/images/M/MV5BZDE3YTNhNzctZjdiNy00YjZjLWE4MDMtOGJjODE2YjE3NDllXkEyXkFqcGdeQXVyODAzNzAwOTU@._V1_.jpg">
+                </div>
+                <div class="info-details">
+                  <p><span class="event-title">KAUN BANEGA CODEPATHI? </span><br>mbark on a coding journey with 'Kaun Banega Code Pathi,' our themed coding contest that challenges participants to unravel intricate problems and emerge as the ultimate code pathi.</p>
+                  
+                  <p class="time">
+                    <i class="uil uil-clock"></i>Timings : 3:00PM - 4:00PM
+                  </p>
+                  <p class="venue">
+                    <i class="uil uil-map"></i>Venue : Tech Center 2nd Floor Front Lab
+                  </p>
+                  <a class="register2" href="https://docs.google.com/forms/d/e/1FAIpQLSdl4PVe7LjeW-r10MUcKA-a_Y1PR4Q0I4CckIKtDmja1_K4bQ/viewform?usp=sf_link" target="new">Register</a>
+                </div>  
+              </div>
+            </div>
+
+            <div class="info-card" id="card4-content" style="display:none;">
+              <i class="uil uil-multiply close-btn" onclick="hideCardContent()"></i>
+              <div class="info">
+                <div class="info-img">
+                  <img src="./images/code_master.jpg">
+                </div>
+                <div class="info-details">
+                  <p><span class="event-title">CODE MASTER</span><br>We are excited to invite you to participate in our upcoming CSD TECH FEST - SIGMA-2K24  Code Master Contest , where the brightest minds come together to showcase their coding prowess.
+                  • Contest Has Two Levels <br>
+                  Level I : Hacker Rank Content<br>
+                  Level II : Rapid Fire Quiz<BR>
+                  🌐 Competition Overview: <br>Prepare yourself for a thrilling challenge that will test your problem-solving skills, Logic Building and creativity. 
+                  🏆 Why Participate?<br>
+                  • Prizes: Exciting prizes and Certificates await the top Three winners </p>
+                  
+                  <p class="time">
+                    <i class="uil uil-clock"></i>Timings : 10:00 AM - 11:00 AM
+                  </p>
+                  <p class="venue">
+                    <i class="uil uil-map"></i>Venue : Technology Center 2nd Floor Lab
+                  </p>
+                  <a class="register2" href="https://forms.gle/ZSW8Ftuy3wqcz12V7" target="new">Register</a>
+                </div>  
+              </div>
+            </div>
+
+            <div class="info-card" id="card5-content" style="display:none;">
+              <i class="uil uil-multiply close-btn" onclick="hideCardContent()"></i>
+              <div class="info">
+                <div class="info-img">
+                  <img src="./images/spell_bee.png">
+                </div>
+                <div class="info-details">
+                  <p><span class="event-title">SPELL BEE</span><br>Are you ready to put your detective skills to the test and unravel the mystery of a heinous crime? Welcome to Criminal Hunt, the immersive and thrilling game where players step into the shoes of seasoned investigators to solve a chilling criminal case.</p>
+                  
+                  <p class="time">
+                    <i class="uil uil-clock"></i>Timings : 9:00AM to 4:00PM
+                  </p>
+                  <p class="venue">
+                    <i class="uil uil-map"></i>Venue : Idea Lab Area
+                  </p>
+                  <a class="register2" href="https://docs.google.com/forms/d/e/1FAIpQLSc_FYowb_w9S9qJBTGnopqFsJIb8T1oTaZnxk8EuzAaiS0rvA/viewform?usp=sf_link" target="new">Register</a>
+                </div>  
+              </div>
+            </div>
+
+            <div class="info-card" id="card6-content" style="display:none;">
+              <i class="uil uil-multiply close-btn" onclick="hideCardContent()"></i>
+              <div class="info">
+                <div class="info-img">
+                  <img src="./images/housie.png">
+                </div>
+                <div class="info-details">
+                  <p><span class="event-title">ONLINE HOUSIE</span><br>Are you ready to put your detective skills to the test and unravel the mystery of a heinous crime? Welcome to Criminal Hunt, the immersive and thrilling game where players step into the shoes of seasoned investigators to solve a chilling criminal case.</p>
+                  
+                  <p class="time">
+                    <i class="uil uil-clock"></i>Timings : For every one hour
+                  </p>
+                  <p class="venue">
+                    <i class="uil uil-map"></i>Venue : Campus Online Stall
+                  </p>
+                  <a class="register2" href="https://docs.google.com/forms/d/e/1FAIpQLSeFMfE00mwZ4hpvvPHbGgm8KKiV27e42fmTiKySicpiKrqSOQ/viewform?usp=sf_link" target="new">Register</a>
+                </div>  
+              </div>
+            </div>
+
+            <div class="info-card" id="card7-content" style="display:none;">
+              <i class="uil uil-multiply close-btn" onclick="hideCardContent()"></i>
+              <div class="info">
+                <div class="info-img">
+                  <img src="./images/ideathon.png">
+                </div>
+                <div class="info-details">
+                  <p><span class="event-title">IDEATHON</span><br>An ideathon is an event where participants from diverse backgrounds come up with Innovative ideas and unique strategies to solve a specific real world problem.</p>
+                  
+                  <p class="time">
+                    <i class="uil uil-clock"></i>Timings : 2:00PM - 2:30PM
+                  </p>
+                  <p class="venue">
+                    <i class="uil uil-map"></i>Venue :  Tech Center
+                  </p>
+                  <a class="register2" href="https://docs.google.com/forms/d/1WQdLpBWAUoUIJbniY4rGo5H6giNJ2NYrDvdVXxZ3rtM/edit" target="new">Register</a>
+                </div>  
+              </div>
+            </div>
+
+          </div>
+<BR><br>
+            <p class="side-heading">Fun Events</p><br><br>
+            <p class="sub-heading"><B>FUN COMBO OFFER :</B> Any two Spot Games + Vintage Vision + Vaikuntapali</p>
+            <p class="sub-heading">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfkV7dSb4bT7CnlOt0YHIaj_1APv-jE5yeqyxcOrbk57SYphQ/viewform?usp=sf_link" target="new" style="text-decoration:none;color:var(--sub-heading);"><B><u>CLICK HERE</u></B> to book a fun events combo offer</a></p>
+            <div id="card-list">
+              <div id="card" >
+                <div id="card-img">
+                  <img src="./images/spot.jpg">
+                </div>
+                <div id="card-content">
+                  <p id="event-name">Spot Games | <span id="cost">Rs.10</span></p>
+                  <div id="buttons">
+                    <a  onclick = "changeContent('card8')" id="details">More Details</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfkV7dSb4bT7CnlOt0YHIaj_1APv-jE5yeqyxcOrbk57SYphQ/viewform?usp=sf_link" target="new" id="register">Register</a>
+                  </div>
+                </div>
+              </div>
+              <div id="card">
+                <div id="card-img">
+                  <img src="./images/v_v.jpg">
+                </div>
+                <div id="card-content">
+                  <p id="event-name">Vintage Vision | <span id="cost">Rs.20</span></p>
+                  <div id="buttons">
+                    <a  onclick = "changeContent('card9')" id="details">More Details</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSecG6bwryxE9I-uD-LYOa4Hyvp4m_2P3xKkkYGsJzZcg0Eh-Q/viewform" target="new" id="register">Register</a>
+                  </div>
+                </div>
+              </div>
+              <div id="card">
+                <div id="card-img">
+                  <img src="./images/freefire.jpg">
+                </div>
+                <div id="card-content">
+                  <p id="event-name">Free Fire | <span id="cost"></span></p>
+                  <div id="buttons">
+                    <a  onclick = "changeContent('card10')" id="details">More Details</a>
+                    <a href="http://saipraveen.free.nf/sigma2k24freefire/ffregister.php" target="new" id="register">Register</a>
+                  </div>
+                </div>
+              </div>
+              <div id="card">
+                <div id="card-img">
+                  <img src="./images/sal.jpg">
+                </div>
+                <div id="card-content">
+                  <p id="event-name">Vaikuntapali | <span id="cost">Rs.20</span></p>
+                  <div id="buttons">
+                    <a  onclick = "changeContent('card11')" id="details">More Details</a>
+                    <a href="https://forms.gle/7YzuXzPEpX9EooC76" target="new" id="register">Register</a>
+                  </div>
+                </div>
+              </div>
+              <div id="card">
+                <div id="card-img">
+                  <img src="./images/vr.jpg">
+                </div>
+                <div id="card-content">
+                  <p id="event-name">Virtual Reality | <span id="cost">Rs.80</span></p>
+                  <div id="buttons">
+                    <a  onclick = "changeContent('card12')" id="details">More Details</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJ1S3649Fes9ytm5xUvO6Z-y2K0ana99G-r9UW6tZjFEHyzw/viewform?usp=sf_link" target="new" id="register">Register</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="fun-event-info">
+              <div class="info-card" id="card8-content" style="display:none;">
+                <i class="uil uil-multiply close-btn" onclick="hideCardContent()"></i>
+                <div class="info">
+                  <div class="info-img">
+                    <img src="./images/spot.jpg">
+                  </div>
+                  <div class="info-details">
+                    <p><span class="event-title">SPOT GAMES</span><br>Engage in festive fun with a variety of interactive and entertaining games designed to enhance the celebratory atmosphere. From traditional carnival classics to innovative challenges, our spot games promise lively entertainment and memorable moments for all attendees. Join the festivities and immerse yourself in the joyous spirit with these engaging activities tailored for the celebration.</p>
+                    
+                    <p class="time">
+                      <i class="uil uil-clock"></i>Timings : 9:00AM to 4:00PM
+                    </p>
+                    <p class="venue">
+                      <i class="uil uil-map"></i>Venue : Idea Lab Parking Area
+                    </p>
+                    <a class="register2" href="https://docs.google.com/forms/d/e/1FAIpQLSfkV7dSb4bT7CnlOt0YHIaj_1APv-jE5yeqyxcOrbk57SYphQ/viewform?usp=sf_link" target="new">Register</a>
+                  </div>  
+                </div>
+              </div>
+  
+              <div class="info-card" id="card9-content" style="display:none;">
+                <i class="uil uil-multiply close-btn" onclick="hideCardContent()"></i>
+                <div class="info">
+                  <div class="info-img">
+                    <img src="./images/v_v.jpg">
+                  </div>
+                  <div class="info-details">
+                    <p><span class="event-title">VINTAGE VISION</span><br>Vintage vision is the AI image Finding Game! Put your visual recognition skills to the test in this exciting challenge. You'll be presented with a series of images, and your task is to describe what's in the image.</p>
+                    
+                    <p class="time">
+                      <i class="uil uil-clock"></i>Timings : 9:00PM to 4:00PM
+                    </p>
+                    <p class="venue">
+                      <i class="uil uil-map"></i>Venue : Idea Lab Parking Area
+                    </p>
+                    <a class="register2" href="https://docs.google.com/forms/d/e/1FAIpQLSecG6bwryxE9I-uD-LYOa4Hyvp4m_2P3xKkkYGsJzZcg0Eh-Q/viewform" target="new">Register</a>
+                  </div>  
+                </div>
+              </div>
+  
+              <div class="info-card" id="card10-content" style="display:none;">
+                <i class="uil uil-multiply close-btn" onclick="hideCardContent()"></i>
+                <div class="info">
+                  <div class="info-img">
+                    <img src="./images/freefire.jpg">
+                  </div>
+                  <div class="info-details">
+                    <p><span class="event-title">FREE FIRE</span><br>Join the Ultimate Battle in Free Fire Showdown! Gear up for an adrenaline-pumping gaming experience as our college fest brings you Free Fire Showdown, the battle royale sensation that will keep you on the edge of your seat.</p>
+                    
+                    <p class="time">
+                      <i class="uil uil-clock"></i>Timings : 9:00PM to 4:00PM
+                    </p>
+                    <p class="venue">
+                      <i class="uil uil-map"></i>Venue : Idea Lab Parking Area
+                    </p>
+                    <a class="register2" href="http://saipraveen.free.nf/sigma2k24freefire/ffregister.php" target="new">Register</a>
+                  </div>  
+                </div>
+              </div>
+  
+              <div class="info-card" id="card11-content" style="display:none;">
+                <i class="uil uil-multiply close-btn" onclick="hideCardContent()"></i>
+                <div class="info">
+                  <div class="info-img">
+                    <img src="./images/sal.jpg">
+                  </div>
+                  <div class="info-details">
+                    <p><span class="event-title">VAIKUNTAPALI</span><br>Experience the timeless allure of Vaikuntapali, an ancient Indian board game. Step into the game and immerse yourself in its strategic depth and cultural richness. Register now to bring this classic to life!</p>
+                    
+                    <p class="time">
+                      <i class="uil uil-clock"></i>Timings : 9:00PM to 4:00PM
+                    </p>
+                    <p class="venue">
+                      <i class="uil uil-map"></i>Venue : Idea Lab Parking Area
+                    </p>
+                    <a class="register2" href="https://forms.gle/7YzuXzPEpX9EooC76" target="new">Register</a>
+                  </div>  
+                </div>
+              </div>
+  
+              <div class="info-card" id="card12-content" style="display:none;">
+                <i class="uil uil-multiply close-btn" onclick="hideCardContent()"></i> 
+                <div class="info">
+                  <div class="info-img">
+                    <img src="./images/vr.jpg">
+                  </div>
+                  <div class="info-details">
+                    <p><span class="event-title">VIRTUAL REALITY</span><br><u>1.Roller Coaster VR Experience</u>: <br>Dive into a virtual reality realm where you'll defy gravity,this VR roller coaster ride guarantees an electrifying thrill ride unlike any other.<br>
+
+                      <u>2.IB Cricket VR Game</u>: <br>Step onto the virtual cricket field and experience the excitement of batting like a pro. With realistic physics and dynamic gameplay, IB Cricket VR delivers an immersive sporting experience.<br>
+                      
+                      <u>3.VR Boxing Game</u>: <br>Enter the ring as Adonis Creed and rise through the ranks in this intense VR boxing simulation. With intuitive controls and cinematic graphics, experience the thrill of becoming a champion in the world of boxing.
+                      </p>  
+                    
+                    <p class="time">
+                      <i class="uil uil-clock"></i>Timings : 9:00PM to 4:00PM
+                    </p>
+                    <p class="venue">
+                      <i class="uil uil-map"></i>Venue : Idea Lab Parking Area
+                    </p>
+                    <a class="register2" href="https://docs.google.com/forms/d/e/1FAIpQLSeJ1S3649Fes9ytm5xUvO6Z-y2K0ana99G-r9UW6tZjFEHyzw/viewform?usp=sf_link" target="new">Register</a>
+                  </div>  
+                </div>
+              </div>  
+            </div>
+          
+        </div>
+
+        <script>
+          function hideCardContent() {
+          document.querySelectorAll('.info-card').forEach(card => {
+            card.style.display = 'none';
+          });
+        }
+        </script>
+    </section>
+
+
+  <section id="gallery">
+      <div id="top">
+          <h1 id="top-h1">GALLERY</h1>
+      </div>
+      <div id="center">
+          <div class="grid-wrapper">
+              <div class="long">
+                <img src="./images/sigma/1.jpeg" class="glr-img">
+              </div>
+              <div class="">
+                <img src="./images/sigma/2.jpeg" class="glr-img">
+              </div>
+              <div class="">  
+                <img src="./images/sigma/3.jpeg" class="glr-img">
+              </div>
+              <div class="big">
+                <img src="./images/sigma/4.jpeg" class="glr-img">
+              </div>
+              <div class="">
+                <img src="./images/sigma/5.jpeg" class="glr-img">
+              </div>
+              <div class="">
+                <img src="./images/sigma/6.jpeg" class="glr-img">
+              </div>
+              <div class="">
+                <img src="./images/sigma/7.jpeg" class="glr-img">
+              </div>
+              <div class="wide">
+                <img src="./images/sigma/8.jpeg" class="glr-img">
+              </div>
+              <div class="big">
+              <img src="./images/sigma/9.jpg" class="glr-img">
+              </div>
+          </div>
+      </div>
+      <div id="bottom">
+          <h1 id="bottom-h1">GALLERY</h1>
+      </div>
+  </section>
+
+  <!-- <section class="organize">
+    <div class="grid-row">
+      <div class="person">
+        <div class="person-img">
+          <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?cs=srgb&dl=pexels-mohamed-abdelghaffar-771742.jpg&fm=jpg">
+        </div> 
+        <div class="person-details">
+          <p class="person-name">Demo Name of Professor</p>
+          <p class="desig">Main Teacher</p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="person-img">
+          <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?cs=srgb&dl=pexels-mohamed-abdelghaffar-771742.jpg&fm=jpg">
+        </div> 
+        <div class="person-details">
+          <p class="person-name">Demo Name of Professor</p>
+          <p class="desig">Main Teacher</p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="person-img">
+          <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?cs=srgb&dl=pexels-mohamed-abdelghaffar-771742.jpg&fm=jpg">
+        </div> 
+        <div class="person-details">
+          <p class="person-name">Demo Name of Professor</p>
+          <p class="desig">Main Teacher</p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="person-img">
+          <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?cs=srgb&dl=pexels-mohamed-abdelghaffar-771742.jpg&fm=jpg">
+        </div> 
+        <div class="person-details">
+          <p class="person-name">Demo Name of Professor</p>
+          <p class="desig">Main Teacher</p>
+        </div>
+      </div>
+      <div class="person">
+        <div class="person-img">
+          <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?cs=srgb&dl=pexels-mohamed-abdelghaffar-771742.jpg&fm=jpg">
+        </div> 
+        <div class="person-details">
+          <p class="person-name">Demo Name of Professor</p>
+          <p class="desig">Main Teacher</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+    <script>
+      function changeContent(cardId) {
+        // Hide all card contents
+        document.querySelectorAll('.info-card').forEach(content => {
+          content.style.display = 'none';
+        });
+
+        // Show the selected card content
+        document.getElementById(cardId + '-content').style.display = 'block';
+      }
+    </script>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  
+  <script>
+    var tl = gsap.timeline({scrollTrigger:{
+  trigger:"#gallery",
+  // markers:true,
+  start:"50% 50%",
+  end:"150% 50%",
+  scrub:2,
+  pin:true
+}});
+tl
+.to("#center",{
+ height: "100vh",
+},'a')
+.to("#top",{
+  top: "-50%",
+},'a')
+.to("#bottom",{
+  bottom: "-50%",
+},'a')
+.to("#top-h1",{
+  top: "60%"
+},'a')
+.to("#bottom-h1",{
+  bottom: "-30%"
+},'a')
+.to("#center-h1",{
+ top: "-30%"
+},'a')
+.to(".grid-wrapper",{
+ delay: -0.2,
+ marginTop: "0%"
+})
+  </script>
+  <script>
+    const cursorDot = document.querySelector("[data-cursor-dot]");
+    const cursorOutline = document.querySelector("[data-cursor-outline]");
+
+    window.addEventListener("mousemove", function (e) {
+      const posX = e.clientX;
+      const posY = e.clientY;
+
+      cursorDot.style.left = `${posX}px`;
+      cursorDot.style.top = `${posY}px`;
+
+      cursorOutline.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+      }, { duration: 600, fill: "forwards" });
+    });
+  
+  </script>
+
+  <script>
+    const element = document.querySelectorAll(".badge__char");
+    const step = 360 / element.length;
+
+    element.forEach((elem, i) => {
+      elem.style.setProperty('--char-rotate', (i * step) + 'deg');
+    })
+
+    const foo = (360 / 7);
+
+    for (i = 0; i <= 7; i++) {
+      console.log((i * foo) + 'deg');
+    }
+
+  </script>
+
+  <!-- <script>
+    setTimeout(function () {  
+      var preloader = document.getElementById('loading');
+      preloader.classList.add('slide-up');
+      setTimeout(function () {
+        preloader.style.display = 'none';
+        var content = document.querySelector('.cover');
+        content.classList.add('fade-in');
+      }, 1000);
+    }, 2000);
+  </script> -->
+
+
+</body>
+
+</html>
